@@ -1,12 +1,25 @@
-height=gets.chomp.to_i
-def print_diamond_pyramid(height)
-  # Partie haute
-  (0...height).each do |i|
-    stars = 2 * i + 1
-    spaces = height - i - 1
-    puts ' ' * spaces + '#' * stars
-  end
+def ask_first_name
+  puts "Quel est ton prénom ?"
+  print "> "
+  first_name = gets.chomp
+  return first_name
 end
 
+def ask_last_name
+  puts "Quel est ton nom de famille ?"
+  print "> "
+  last_name = gets.chomp
+  return last_name
+end
 
-print_diamond_pyramid(height)
+def greet(first_name, last_name)
+  puts "Bienvenue, !"
+end
+
+def perform
+  first_name = ask_first_name
+  last_name = ask_last_name
+  greet(first_name, last_name)
+end
+
+perform
