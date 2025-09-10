@@ -9,5 +9,3 @@ end
 first_name = ask_first_name  
 
 say_hello(first_name)
-
-
